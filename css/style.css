@@ -51,6 +51,7 @@ img {
 
 .main-header {
 	background-image: url("../img/header-bg.jpg");
+	background-color: #454a6a;
 	min-height: 800px;
 	position: relative;
 }
