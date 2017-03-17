@@ -1,3 +1,11 @@
+/* === =========== ===*/
+
+
+/* === MAIN STYLES ===*/
+
+
+/* === =========== ===*/
+
 body {
 	margin: 0;
 	padding: 0;
@@ -6,15 +14,20 @@ body {
 	font-size: 15px;
 }
 
-h1 	{
+h1 {
 	font-size: 50px;
 	font-weight: bold;
 	line-height: 32.5px;
 }
 
+img {
+	max-width: 100%;
+}
+
 .container {
 	max-width: 1100px;
 	margin: 0 auto;
+	position: relative;
 }
 
 .btn {
@@ -26,17 +39,143 @@ h1 	{
 	font-weight: bold;
 	padding: 15px 25px;
 }
-.main-slider {
+
+
+/* === ====== ===*/
+
+
+/* === HEADER ===*/
+
+
+/* === ====== ===*/
+
+.main-header {
+	background-image: url("../img/header-bg.jpg");
+	min-height: 800px;
 	position: relative;
 }
 
-.main-navigation {
-	position: absolute;
-	top: 0;
+
+/* === NAVIGATION ===*/
+
+.header-logo {
+	display: inline-block;
+	margin-top: 20px;
 }
 
+.main-navigation {
+	float: right;
+	margin-top: 30px;
+}
+
+.main-navigation-list>li {
+	display: inline-block;
+	position: relative;
+}
+
+.main-navigation-list a {
+	color: #fff;
+	font-weight: bold;
+	padding: 10px 12px;
+	text-decoration: none;
+}
+
+.main-navigation-list>li:hover>a {
+	background-color: #fcff19;
+	color: #000;
+	padding-bottom: 20px;
+	border-radius: 10px 10px 0 0;
+}
+
+.main-navigation-list li:hover .sub-menu {
+	display: block;
+}
+
+.main-navigation-list>li:nth-last-child(2):hover .sub-menu {
+	right: 0;
+	border-radius: 10px 0 10px 10px;
+}
+
+.sub-menu {
+	position: absolute;
+	display: none;
+	top: 25px;
+	border-radius: 0 10px 10px 10px;
+	overflow: hidden;
+	transition: 2s;
+	perspective: 700px;
+}
+
+.sub-menu li {
+	width: 220px;
+	background-color: #fcff19;
+	transform-origin: bottom;
+	animation: 0.5s li-appear;
+}
+
+@keyframes li-appear {
+	0% {
+		transform: rotateX(90deg);
+	}
+	100% {
+		transform: rotateX(0);
+	}
+}
+
+.sub-menu a {
+	display: inline-block;
+	color: #000;
+}
+
+.sub-menu li:hover {
+	background-color: #e1e200;
+}
+
+
+/* === NAVIGATION-END === */
+
 .main-slider {
+	position: absolute;
+	top: 40%;
 	width: 100%;
 	text-align: center;
+}
 
+.arrow-left,
+.arrow-right {
+	position: absolute;
+	width: 58px;
+	height: 58px;
+	top: 50%;
+	left: 20px;
+	transform: translateY(-50%);
+	background-image: url("../img/arrow-left.png");
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+}
+
+.arrow-right {
+	left: auto;
+	right: 20px;
+	transform: rotate(180deg) translateY(50%);
+}
+
+.main-slider-heading,
+.main-slider-motto {
+	color: #fff;
+}
+
+.main-slider-motto {
+	font-size: 28px;
+	font-weight: normal;
+	text-transform: none;
+}
+
+.scroll-down {
+	position: absolute;
+	display: inline-block;
+	bottom: 30px;
+	left: 50%;
+	transform: translateX(-50%);
 }
