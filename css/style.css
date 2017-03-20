@@ -1,10 +1,8 @@
-/* === =========== ===*/
+/*= =========== ===
 
+=== MAIN STYLES ===
 
-/* === MAIN STYLES ===*/
-
-
-/* === =========== ===*/
+=== =========== =*/
 
 body {
 	margin: 0;
@@ -12,12 +10,18 @@ body {
 	font-family: 'Roboto', 'Arial', sans-serif;
 	text-transform: uppercase;
 	font-size: 15px;
+	line-height: 32px;
 }
 
 h1 {
 	font-size: 50px;
 	font-weight: bold;
 	line-height: 32.5px;
+}
+
+h2 {
+	font-size: 28px;
+	line-height: 32px;
 }
 
 img {
@@ -30,27 +34,34 @@ img {
 	position: relative;
 }
 
+.clearfix::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
 .btn {
+	display: inline-block;
+	vertical-align: top;
 	text-decoration: none;
 	font-weight: 12px;
 	border-radius: 10px;
 	background-color: #000;
 	color: #fcff19;
 	font-weight: bold;
-	padding: 15px 25px;
+	padding: 5px 25px;
+	text-transform: uppercase;
+	line-height: 32px;
 }
 
 
-/* === ====== ===*/
-
-
-/* === HEADER ===*/
-
-
-/* === ====== ===*/
+/*======== ===
+=== HEADER ===
+=== ========*/
 
 .main-header {
 	background-image: url("../img/header-bg.jpg");
+	background-repeat: no-repeat;
 	background-color: #454a6a;
 	min-height: 800px;
 	position: relative;
@@ -133,7 +144,7 @@ img {
 }
 
 
-/* === NAVIGATION-END === */
+/* === SLIDER === */
 
 .main-slider {
 	position: absolute;
@@ -151,6 +162,7 @@ img {
 	left: 20px;
 	transform: translateY(-50%);
 	background-image: url("../img/arrow-left.png");
+	background-repeat: no-repeat;
 	background-color: transparent;
 	border: none;
 	cursor: pointer;
@@ -180,3 +192,227 @@ img {
 	left: 50%;
 	transform: translateX(-50%);
 }
+
+
+/*= ========== ===
+
+=== CATEGORIES ===
+
+=== ========== =*/
+
+.categories {
+	background-image: url('../img/categories-bg.jpg');
+	background-repeat: repeat-y;
+	text-align: center;
+	padding-top: 50px;
+	padding-bottom: 160px;
+}
+
+.categories-container {
+	display: flex;
+	flex-direction: row;
+	-webkit-flex-wrap: wrap;
+	-moz-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	-o-flex-wrap: wrap;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.categories-item {
+	width: 346px;
+	min-height: 288px;
+	margin-top: 52px;
+	padding-top: 120px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.categories-item:first-of-type {
+	background-image: url(../img/cat-1.jpg);
+}
+
+.categories-item:nth-of-type(2) {
+	background-image: url(../img/cat-2.jpg);
+}
+
+.categories-item:last-of-type {
+	background-image: url(../img/cat-3.jpg);
+}
+
+.categories-item-name {
+	display: block;
+	margin-bottom: 10px;
+	color: #fcff19;
+	font-weight: bold;
+}
+
+.categories-item-description {
+	display: block;
+	line-height: 32px;
+	color: #fff;
+	text-transform: none;
+	font-weight: 100;
+	font-size: 16px;
+	margin-bottom: 10px;
+}
+
+.categories-item a {
+	background-color: transparent;
+	font-size: 12px;
+	color: #fff;
+	border: 3px solid #fff;
+}
+
+
+/*= ============= ===
+
+=== POPULAR-BIKES ===
+
+=== ============= =*/
+
+.popular-bikes {
+	text-align: center;
+	padding-top: 50px;
+}
+
+.popular-bikes-container {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.popular-bikes article {
+	margin: 0 23px;
+}
+
+.bike-description {
+	float: left;
+	text-align: left;
+}
+
+.bike-name {
+	font-weight: bold;
+	display: block;
+	line-height: 32px;
+}
+
+.bike-price {
+	display: block;
+}
+
+.bike-chose {
+	float: right;
+	padding-top: 8px;
+}
+
+.bike-chose select {
+	text-transform: uppercase;
+	border: 1px solid #8f8f8f;
+	font-weight: bold;
+	font-size: 12px;
+	font-family: 'Roboto', 'Arial', sans-serif;
+	line-height: 32px;
+	border-radius: 10px;
+	outline: none;
+	box-sizing: border-box;
+	height: 42px;
+	width: 143px;
+	padding-left: 10px;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-ms-appearance: none;
+	appearance: none!important;
+	text-indent: 0.01px;
+	position: relative;
+	background-image: url("../img/button-tick.png");
+	background-position: right 17px center;
+	background-repeat: no-repeat;
+	cursor: pointer;
+	margin-right: 5px;
+}
+
+.bike-chose select::-ms-expand {
+	display: none;
+}
+
+.buy-btn-inactive {
+	color: #fff;
+	background-color: #b7b7b7;
+}
+
+
+/*= ========== ===
+
+=== CONTACT-US ===
+
+=== ========== =*/
+
+.contact-us {
+	background-image: url('../img/contact-bg.jpg');
+	background-repeat: repeat-y;
+	text-align: center;
+	padding-top: 50px;
+}
+
+.contanct-meta {
+	text-transform: none;
+}
+
+.contact-form {
+	width: 450px;
+	margin: 0 auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+	box-sizing: border-box;
+	padding: 5px 10px;
+	margin: 5px 0;
+	border-radius: 10px;
+	border: 1px solid #dadada;
+	font-style: italic;
+	font-size: 12px;
+	text-transform: uppercase;
+	font-family: 'Roboto', 'Arial', sans-serif;
+	line-height: 32px;
+	outline: none;
+}
+
+.contact-form input[type="text"] {
+	width: 47%;
+}
+
+.contact-form input[type="text"]:first-of-type {
+	margin-right: 5%;
+}
+
+.contact-form input[type="email"] {
+	width: 100%;
+}
+
+.contact-form textarea {
+	width: 100%;
+	height: 153px;
+	resize: none;
+}
+
+.send-btn {
+	cursor: pointer;
+	background-color: #b7b7b7;
+	border: none;
+	color: #fff;
+}
+
+
+/*= ====== ===
+
+=== FOOTER ===
+
+=== ====== =*/
+
