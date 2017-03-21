@@ -29,7 +29,7 @@ img {
 }
 
 .container {
-	max-width: 1100px;
+	max-width: 1095px;
 	margin: 0 auto;
 	position: relative;
 }
@@ -72,16 +72,18 @@ img {
 
 .header-logo {
 	display: inline-block;
+	vertical-align: top;
 	margin-top: 20px;
 }
 
 .main-navigation {
 	float: right;
-	margin-top: 30px;
+	margin-top: 35px;
 }
 
 .main-navigation-list>li {
 	display: inline-block;
+	vertical-align: top;
 	position: relative;
 }
 
@@ -97,6 +99,47 @@ img {
 	color: #000;
 	padding-bottom: 20px;
 	border-radius: 10px 10px 0 0;
+}
+
+.cart a {
+	display: inline-block;
+	vertical-align: top;
+	width: 26px;
+	height: 26px;
+	padding: 0 12px;
+	background-image: url('../img/cart.png');
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.main-navigation-list>.cart:hover {
+	animation: shake 0.72s cubic-bezier(.36, .07, .19, .97) both;
+}
+
+.main-navigation-list>.cart:hover a {
+	padding-bottom: 0;
+	border-radius: 0;
+	background-color: transparent;
+}
+
+@keyframes shake {
+	10%,
+	90% {
+		transform: translate3d(0, -1px, 0);
+	}
+	20%,
+	80% {
+		transform: translate3d(0, 2px, 0);
+	}
+	30%,
+	50%,
+	70% {
+		transform: translate3d(0, -3px, 0);
+	}
+	40%,
+	60% {
+		transform: translate3d(0, 3px, 0);
+	}
 }
 
 .main-navigation-list li:hover .sub-menu {
@@ -275,6 +318,7 @@ img {
 .popular-bikes {
 	text-align: center;
 	padding-top: 50px;
+	padding-bottom: 20px;
 }
 
 .popular-bikes-container {
@@ -294,21 +338,18 @@ img {
 .bike-description {
 	float: left;
 	text-align: left;
+	line-height: 1.15;
 }
 
 .bike-name {
 	font-weight: bold;
-	display: block;
-	line-height: 32px;
-}
-
-.bike-price {
-	display: block;
+	display: inline-block;
+	width: 100%;
+	margin-bottom: 5px;
 }
 
 .bike-chose {
 	float: right;
-	padding-top: 8px;
 }
 
 .bike-chose select {
@@ -358,6 +399,7 @@ img {
 	background-repeat: repeat-y;
 	text-align: center;
 	padding-top: 50px;
+	padding-bottom: 80px;
 }
 
 .contanct-meta {
@@ -407,6 +449,7 @@ img {
 	background-color: #b7b7b7;
 	border: none;
 	color: #fff;
+	width: 100%;
 }
 
 
@@ -415,4 +458,31 @@ img {
 === FOOTER ===
 
 === ====== =*/
+
+.main-footer {
+	background-color: #fcff19;
+	padding: 17px 0;
+}
+
+.footer-logo {
+	display: inline-block;
+	vertical-align: top;
+	line-height: 0;
+}
+
+.footer-navigation {
+	float: right;
+}
+
+.footer-navigation li {
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 35px;
+}
+
+.footer-navigation a {
+	text-decoration: none;
+	color: #000;
+	font-weight: bold;
+}
 
